@@ -1,0 +1,20 @@
+<Candies>
+    <Candy id="1">
+        <Name>Caramel Delight</Name>
+        <Energy>250</Energy>
+        <Type>Caramel</Type>
+        <Ingredients>
+            <Water>5</Water>
+            <Sugar>300</Sugar>
+            <Fructose>150</Fructose>
+            <Vanillin>10</Vanillin>
+        </Ingredients>
+        <Value>
+            <Proteins>2</Proteins>
+            <Fats>5</Fats>
+            <Carbohydrates>40</Carbohydrates>
+        </Value>
+        <Production>SweetFactory</Production>
+    </Candy>
+    <!-- Add more candies here -->
+</Candies>

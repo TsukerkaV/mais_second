@@ -1,0 +1,46 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="Candies">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Candy" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Name" type="xs:string"/>
+                            <xs:element name="Energy" type="xs:int"/>
+                            <xs:element name="Type" type="CandyType"/>
+                            <xs:element name="Ingredients" type="IngredientsType"/>
+                            <xs:element name="Value" type="ValueType"/>
+                            <xs:element name="Production" type="xs:string"/>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:ID" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:simpleType name="CandyType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Caramel"/>
+            <xs:enumeration value="Chocolate"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="IngredientsType">
+        <xs:sequence>
+            <xs:element name="Water" type="xs:int"/>
+            <xs:element name="Sugar" type="xs:int"/>
+            <xs:element name="Fructose" type="xs:int"/>
+            <xs:element name="Vanillin" type="xs:int" minOccurs="0"/>
+            <xs:element name="ChocolateType" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ValueType">
+        <xs:sequence>
+            <xs:element name="Proteins" type="xs:float"/>
+            <xs:element name="Fats" type="xs:float"/>
+            <xs:element name="Carbohydrates" type="xs:float"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
